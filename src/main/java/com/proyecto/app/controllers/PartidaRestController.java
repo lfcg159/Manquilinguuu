@@ -20,7 +20,7 @@ public class PartidaRestController {
 	
 	@PostMapping("/crearpartida/{puntaje}")
 	public Flux<Partida> crearPartida(@PathVariable int puntaje){
-		Flux<Partida> partidas 
+		return null; 
 	}
 	
 }
