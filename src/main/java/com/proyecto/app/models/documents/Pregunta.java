@@ -20,9 +20,8 @@ public class Pregunta {
 	private String correcta;
 
 	
-	
-	
-	
+	public Pregunta() {}
+		
 	public Pregunta(String tema, String pregunta, ArrayList<String> respuestas, String correcta) {
 		this.tema = tema;
 		this.pregunta = pregunta;
@@ -30,6 +29,12 @@ public class Pregunta {
 		this.correcta = correcta;
 	}
 
+	public Pregunta(String id, String tema, String pregunta, ArrayList<String> respuestas, String correcta) {
+		this.tema = tema;
+		this.pregunta = pregunta;
+		this.respuestas = respuestas;
+		this.correcta = correcta;
+	}
 	
 	public String getId() {
 		return id;

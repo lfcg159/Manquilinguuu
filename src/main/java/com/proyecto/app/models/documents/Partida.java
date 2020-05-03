@@ -21,8 +21,17 @@ public class Partida {
 	private String tema;
 
 	
+	public Partida() {	}
 	
 	public Partida( int puntaje, ArrayList<String> jugadores, String tema) {
+		this.puntaje = puntaje;
+		this.jugadores = jugadores;
+		this.createAt = new Date();
+		this.tema = tema;
+	}
+	
+	public Partida(String id, int puntaje, ArrayList<String> jugadores, String tema) {
+		this.id = id;
 		this.puntaje = puntaje;
 		this.jugadores = jugadores;
 		this.createAt = new Date();

@@ -19,15 +19,20 @@ public class Jugador {
 	
 	private int puntaje;
 	
-
 	
-	
+	public Jugador() {}
 	
 	public Jugador( String nombre) {
 		this.nombre = nombre;
 		this.puntaje = 0;
 	}
 
+	public Jugador(String id, String nombre, int puntaje) {
+		this.id = id;		
+		this.nombre = nombre;
+		this.puntaje = puntaje;
+	}
+	
 	public String getId() {
 		return id;
 	}
