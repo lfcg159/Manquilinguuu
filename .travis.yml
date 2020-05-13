@@ -1,2 +1,8 @@
 Language: java
 Jdk: oraclejdk11
+
+# safelist
+branches:
+  only:
+  - master
+  - Sv01
