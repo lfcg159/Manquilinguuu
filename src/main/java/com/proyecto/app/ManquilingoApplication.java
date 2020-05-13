@@ -60,7 +60,7 @@ public class ManquilingoApplication implements CommandLineRunner{
 		}).subscribe();
 	}*/
 	
-		jugadorDao.save(new Jugador("50", "Elmo", 1000)).subscribe();
+		jugadorDao.save(new Jugador("55", "Elmo", 1000)).subscribe();
 	
 	}
 }
