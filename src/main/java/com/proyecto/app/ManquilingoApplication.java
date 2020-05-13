@@ -8,9 +8,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.proyecto.app.models.dao.JugadorDao;
 import com.proyecto.app.models.dao.PartidaDao;
 import com.proyecto.app.models.dao.PreguntaDao;
-
+import com.proyecto.app.models.documents.Jugador;
 import com.proyecto.app.models.documents.Partida;
 import com.proyecto.app.models.documents.Pregunta;
 
@@ -25,6 +26,9 @@ public class ManquilingoApplication implements CommandLineRunner{
 	@Autowired
 	private PreguntaDao preguntaDao;
 	
+	@Autowired
+	private JugadorDao jugadorDao;
+	
 	public static void main(String[] args) {
 		SpringApplication.run(ManquilingoApplication.class, args);
 	}
@@ -36,7 +40,7 @@ public class ManquilingoApplication implements CommandLineRunner{
 		a.add("Maria");
 		a.add("Juan");
 		
-		//partidaDao.save(new Partida(0, a, "Sociales")).subscribe();
+		partidaDao.save(new Partida(0, a, "Sociales")).subscribe();
 		
 		/*Flux.just(new Partida(0, a, "Sociales")).flatMap(partida-> {
 			return partidaDao.save(partida);
@@ -48,7 +52,7 @@ public class ManquilingoApplication implements CommandLineRunner{
 		b.add("Barrancabermeja");
 		b.add("Medellin");
 		
-		//preguntaDao.save(new Pregunta("Sociales", "Cual es la capital de Antioquia?", b, "Medellin")).subscribe();
+		preguntaDao.save(new Pregunta("Sociales", "Cual es la capital de Antioquia?", b, "Medellin")).subscribe();
 		
 		/*Flux.just( new Pregunta("Sociales", "Cual es la capital de Antioquia?", b, "Medellin")).flatMap(pregunta ->{
 			return preguntaDao.save(pregunta);
@@ -56,6 +60,7 @@ public class ManquilingoApplication implements CommandLineRunner{
 		}).subscribe();
 	}*/
 	
+		jugadorDao.save(new Jugador("50", "Elmo", 1000)).subscribe();
 	
 	}
 }
