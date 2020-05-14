@@ -6,3 +6,12 @@ branches:
   only:
   - master
   - Sv01
+
+deploy:
+  provider: releases
+  api_key: EzIa0SJADyKFQZvVYy2DNw
+  file: "build/libs/Project.jar"
+  skip_cleanup: true
+  on:
+    all_branches: true
+    tags: true
