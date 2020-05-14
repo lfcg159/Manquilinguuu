@@ -7,11 +7,4 @@ branches:
   - master
   - Sv01
 
-deploy:
-  provider: releases
-  api_key: ${api_key}
-  file: "build/libs/Project.jar"
-  skip_cleanup: true
-  on:
-    all_branches: true
-    tags: true
+
