@@ -9,7 +9,7 @@ branches:
 
 deploy:
   provider: releases
-  api_key: EzIa0SJADyKFQZvVYy2DNw
+  api_key: ${api_key}
   file: "build/libs/Project.jar"
   skip_cleanup: true
   on:
